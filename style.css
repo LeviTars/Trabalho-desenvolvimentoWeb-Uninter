@@ -1,0 +1,319 @@
+/* ============================================================
+   GERAL
+============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+/* ============================================================
+   MENU
+============================================================ */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 40px 10px 0 10px;
+}
+
+nav ul li a {
+  color: #e0e1dd;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+}
+
+a:hover {
+  background-color: #99d98c;
+  color: #ffffff;
+}
+
+.linha {
+  background-color: #228CA9;
+  padding: 2px;
+  width: 40rem;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   CONTATO
+============================================================ */
+.mensagem-alerta {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1000;
+}
+
+.mensagem-alerta.erro {
+  background-color: #f44336;
+}
+
+.mensagem-alerta.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.oculto {
+  display: none;
+}
+
+#titulo {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  font-size: 70px;
+  font-family: "Anta", sans-serif;
+}
+
+#titulo2 {
+  color: #228CA9;
+  margin: 80px 0 0 210px;
+  font-size: 40px;
+}
+
+form, label {
+  color: white;
+  font-size: 10px;
+}
+
+.form {
+  margin: 30px 0 0 210px;
+}
+
+.enviar {
+  padding: 10px 25px;
+  font-size: 15px;
+  border-radius: 10px;
+  color: white;
+  background-color: #228CA9;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background-color: #99d98c;
+  color: #228CA9;
+}
+
+.input {
+  padding: 15px;
+  width: 480px;
+  height: 12px;
+  font-size: 15px;
+  border-radius: 7px;
+}
+
+input::placeholder {
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #228CA9;
+}
+
+textarea {
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+textarea::placeholder {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.meu-textarea {
+  width: 400px;
+  height: 150px;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+/* ============================================================
+   PORTFÓLIO
+============================================================ */
+.tituloPortifolio {
+  color: #228CA9;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.descricaoPortifolio {
+  color: white;
+  margin-left: 50px;
+  font-size: 15px;
+  font-family: system-ui, sans-serif;
+  list-style-type: circle;
+  width: 70rem;
+}
+
+.link {
+  margin-left: 50px;
+  color: #99d98c;
+  font-size: 15px;
+}
+
+/* ============================================================
+   FORMAÇÃO
+============================================================ */
+@keyframes flutuar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.containerG {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  margin: 100px auto 0 auto;
+  max-width: 1000px;
+}
+
+.container2,
+.container3 {
+  background-color: #1a1a1a;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #228CA9;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+.container2:hover,
+.container3:hover {
+  box-shadow: 0 0 10px #99d98c;
+}
+
+.containerForma1,
+.containerForma2 {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.tituloFormacao {
+  color: white;
+  background-color: #228CA9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 5px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.descriFormacao {
+  color: black;
+  font-size: 15px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+/* ============================================================
+   SOBRE MIM
+============================================================ */
+
+.container1 {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 50%;
+}
+
+.nome {
+  margin-top: 0;
+  color: white;
+  font-size: 40px;
+  border-bottom: 8px solid #228CA9;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.eu {
+  color: #ffffff;
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.minhaFoto {
+  margin-left: 50px;
+  border: 4px solid #228CA9;
+  border-radius: 15px;
+  width: 20%;
+  animation: flutuar 4s ease-in-out infinite;
+}
+
+.minhaFoto:hover {
+  border: 5px solid #99d98c;
+}
+
+span{
+  color: #228CA9;
+  font-size: 22px;
+  font-style:oblique;
+}
+
+/* ============================================================
+   EFEITO TRAIL
+============================================================ */
+#trail-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.trail {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #228CA9;
+  border-radius: 50%;
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
