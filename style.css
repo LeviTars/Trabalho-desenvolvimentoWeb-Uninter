@@ -1,3 +1,4 @@
+
 /* ============================================================
    GERAL
 ============================================================ */
@@ -197,6 +198,7 @@ textarea::placeholder {
   padding: 20px;
   margin: 100px auto 0 auto;
   max-width: 1000px;
+  flex-wrap: wrap;
 }
 
 .container2,
@@ -242,12 +244,12 @@ textarea::placeholder {
 /* ============================================================
    SOBRE MIM
 ============================================================ */
-
 .container1 {
   display: flex;
   margin-top: 100px;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .texto {
@@ -285,10 +287,10 @@ textarea::placeholder {
   border: 5px solid #99d98c;
 }
 
-span{
+span {
   color: #228CA9;
   font-size: 22px;
-  font-style:oblique;
+  font-style: oblique;
 }
 
 /* ============================================================
@@ -315,5 +317,100 @@ span{
   to {
     opacity: 0;
     transform: scale(2);
+  }
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+============================================================ */
+@media (max-width: 1024px) {
+  .linha,
+  .descricaoPortifolio {
+    width: 90%;
+  }
+
+  .input,
+  .meu-textarea {
+    width: 90%;
+  }
+
+  .form,
+  #titulo2 {
+    margin-left: 30px;
+  }
+
+  .minhaFoto {
+    width: 30%;
+    margin-left: 20px;
+  }
+
+  .texto {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .containerG {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  #titulo {
+    font-size: 40px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  #titulo2 {
+    font-size: 28px;
+    margin: 40px 0 0 20px;
+  }
+
+  .form {
+    margin: 20px;
+  }
+
+  .input,
+  .meu-textarea {
+    width: 100%;
+  }
+
+  .container1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .minhaFoto {
+    width: 60%;
+    margin: 20px 0;
+  }
+
+  .nome {
+    font-size: 30px;
+  }
+
+  .eu {
+    font-size: 16px;
+  }
+
+  .tituloPortifolio,
+  .descricaoPortifolio,
+  .link {
+    margin-left: 20px;
+  }
+
+  .descricaoPortifolio {
+    width: 90%;
   }
 }
